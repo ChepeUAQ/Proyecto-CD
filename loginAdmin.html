@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body style="margin: 0;">
+    
+    <div id="container_doble">
+        <div id="bienvenido" class="container">
+            <h1>Iniciar Sesión</h1>
+            <p>Vas a ingresar como administrador</p>
+            <img id="img_logo_CD" src="resourses/logo_CD.png" alt="logo_CD">
+        </div>
+
+        <div id="selec" class="container">
+            <h2 id="texto_selec">Ingresa tus datos</h2>
+
+            <form action="admin.html" method="">
+                <label for="expediente">Expediente:</label>
+                <input class="input_text" style="display: block;" type="text" name="expediente" id="expediente" placeholder="    123456">
+                
+                <label for="cont">Contraseña:</label>
+                <input class="input_text" style="display: block;" type="password" name="cont" id="cont" placeholder="    ********">
+
+                <input class="submit" style="display: block;" type="submit" name="login" value="Login">
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
