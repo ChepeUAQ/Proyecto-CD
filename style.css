@@ -1,1 +1,108 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
 
+/* Sección para el style de alumnos */
+:root {
+  --blue: #13173A;
+  --light_blue: #272e6f;
+  --white: #ffffff; 
+  --gray: #d0d0d0;
+}
+
+b {
+  font-weight: 600;
+}
+
+.container {
+  margin: auto;
+  width: 90%;
+}
+
+.accordion {
+  background-color: var(--blue);
+  color: var(--white);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-radius: 10px 10px 0 0;
+  outline: none;
+  transition: 0.4s;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.panel img {
+  max-height: 170px;
+  border-radius: 50%;
+  border: solid 1px black;
+  margin: 15px 0 0 10px;
+  display: block;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: #eee;
+  border: solid 2px var(--light_blue);
+  overflow: hidden;
+  max-height: 0;
+  border-radius: 0 0 10px 10px;
+  transition: max-height 0.2s ease-out;
+  margin-bottom: 10px;
+  font-weight: 300;
+}
+
+.panel table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.panel td, .panel th {
+  border: 1px solid var(--gray);
+  padding: 7px;
+}
+
+.active, .accordion:hover {
+  background-color: var(--light_blue);
+}
+
+.accordion:after {
+  content: '\25be';
+  font-size: 13px;
+  color: var(--white);
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\25b4";
+}
+
+ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 95%;
+  }
+
+  .accordion {
+    font-size: 12px;
+  }
+
+  .panel {
+    font-size: 12px;
+  }
+
+  .panel img {
+    display: none;
+  }
+
+  td {
+    font-size: 10px;
+  }
+}
