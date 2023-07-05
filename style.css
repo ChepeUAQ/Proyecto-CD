@@ -2,7 +2,6 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-/* Sección para el style de alumnos */
 :root {
   --blue: #13173A;
   --light_blue: #272e6f;
@@ -19,6 +18,7 @@ b {
   width: 90%;
 }
 
+/* --- Sección para el style de alumnos --- */
 .accordion {
   background-color: var(--blue);
   color: var(--white);
