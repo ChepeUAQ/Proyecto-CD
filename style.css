@@ -1,3 +1,4 @@
+/* --- Styles universales --- */
 * {
   font-family: 'Montserrat', sans-serif;
 }
@@ -7,15 +8,109 @@
   --light_blue: #272e6f;
   --white: #ffffff; 
   --gray: #d0d0d0;
+  --light_gray: #fafafa;
+}
+
+.container {
+  margin: auto;
+  width: 90%;
 }
 
 b {
   font-weight: 600;
 }
 
-.container {
+ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+/* --- Sección para el style de index --- */
+#container_doble {
+  display: flex;
+}
+
+#bienvenido {
+  flex-basis: 110%;
+  min-height: 100%;
+  padding: 20px;
+  padding-left: 40px ;
+}
+
+#bienvenido h1 {
+  font-size: 3.1rem;
+}
+
+#bienvenido p {
+  font-size: 1.1rem;
+  max-width: 600px;
+}
+
+#img_logo_CD {
+  max-height: 170px;
+}
+
+#selec {
+  flex-basis: 80%;
+  background: var(--blue);
+  min-height: 100vh;
+}
+
+#selec h2 {
+  color: var(--white);
+  text-align: center;
+  margin-top: 15vh;
+}
+
+#img_selec {
   margin: auto;
-  width: 90%;
+  display: block;
+  width: 70%;
+  max-width: 300px;
+}
+
+#selec form {
+  padding: 20px;
+  margin: auto;
+  width: 50%;
+}
+
+.submit {
+  width: 100%;
+  margin: 15px 0 17px 0;
+  padding: 10px 0 10px 0;
+  border-radius: 15px;
+  background: var(--light_gray);
+  border: 2px solid var(--light_gray);
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.submit:hover, .submit:focus  {
+  cursor: pointer;
+  background: var(--light_blue);
+  border: 2px solid var(--light_blue);
+  color: var(--white);
+  scale: 1.1;
+}
+
+/* --- Sección para el style de login --- */
+label {
+  color: var(--white);
+}
+
+.input_text {
+  width: 100%;
+  margin: 10px 0 12px 0;
+  padding: 10px 0 10px 0;
+  background: var(--gray);
+  border: var(--gray);
+  border-radius: 15px;
+}
+
+.input_text:focus {
+  background: var(--white);
+  border: var(--white);
 }
 
 /* --- Sección para el style de alumnos --- */
@@ -64,7 +159,7 @@ b {
   padding: 7px;
 }
 
-.active, .accordion:hover {
+.active, .accordion:hover, .accordion:focus {
   background-color: var(--light_blue);
 }
 
@@ -80,14 +175,18 @@ b {
   content: "\25b4";
 }
 
-ul {
-  list-style-position: inside;
-  padding-left: 0;
-}
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .container {
     width: 95%;
+  }
+
+  #bienvenido {
+    display: none;
+  }
+
+  #selec {
+    flex-basis: 100%;
   }
 
   .accordion {
