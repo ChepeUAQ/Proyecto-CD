@@ -1,0 +1,114 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f5f5f5;
+  }
+  
+  h1 {
+    margin-top: 2rem;
+    font-size: 2rem;
+  }
+  h5{
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
+  
+  h2 {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .input-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+    left: 2rem
+  }
+  
+  .input-wrapper input {
+    width: 75%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #928f8f;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    right: 5rem
+  }
+  
+  .input-wrapper label {
+    position: absolute;
+    right: 8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #838282;
+    transition: 0.3s;
+    pointer-events: none;
+  }
+  
+  .input-wrapper input:focus + label,
+  .input-wrapper input:valid + label {
+    top: -20px;
+    font-size: 14px;
+    color: blue;
+  }
+  
+  .submit-wrapper {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem; /* Ajuste para separar el botón del resto de los elementos */
+  }
+  
+  .submit-wrapper input[type="submit"] {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #13173A;
+    color: white;
+    width: 250px;
+  }
+  
+  .submit-wrapper input[type="submit"]:hover {
+    background-color: rgb(46, 206, 255);
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .cuadrito {
+    position: absolute;
+    top: 50%;
+    right: 15rem;
+    transform: translateY(-50%);
+  }
+  
+  .izq {
+    position: absolute;
+    top: 50%;
+    left: 10rem;
+    transform: translateY(-50%);
+  }
+  
+  @media screen and (max-width: 767px) {
+    .izq {
+      display: none;
+    }
+  }
+  .img {
+    position: relative;
+  }
+  
+  .logo {
+    position: absolute;
+    top: -20rem; /* Ajusta el valor según tus necesidades */
+    left: -35rem; /* Ajusta el valor según tus necesidades */
+    margin-right: 1rem; /* Ajusta el valor según tus necesidades */
+  }
+  
+  
