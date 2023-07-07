@@ -1,0 +1,98 @@
+/* --- Styles universales --- */
+
+:root {
+    --blue: #13173A;
+    --light_blue: #272e6f;
+    --white: #ffffff; 
+    --gray: #d0d0d0;
+    --light_gray: #fafafa;
+  }
+
+  * {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#titulo-certificado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--white);
+    min-width: 55%;
+    margin: 20px;
+}
+
+#titulo-certificado h1, p, img{
+    margin-left: 30px;
+}
+
+#img_logo_CD {
+    max-height: 170px;
+  }
+
+#container_doble{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#img_logo_CD {
+    max-height: 170px;
+    margin-top: 30px;
+}
+
+#crearCertificado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+    background-color: var(--blue);
+    min-width: 100%;
+}
+
+.input_text{
+    width: 80%;
+    margin: 10px 0 12px 0;
+    padding: 10px 0 10px 0;
+    background: var(--gray);
+    border: var(--gray);
+    border-radius: 15px;
+}
+
+label{
+    display: flex;
+    align-self: start;
+    margin-left: 10%;
+
+}
+#titulo-certificado h1{
+    font-size: 3.1em;
+}
+
+#titulo-certificado p{
+    font-size: 1.1em;
+}
+
+h2{
+    margin-bottom: 30px;
+    font-size: 1.5em;
+}
+
+#registro-certificado{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 40%;
+}
+
+#btn_crearCertificado{
+    margin-top: 30px;
+    width: 80%;
+    border-radius: 15px;
+    min-height: 45px;
+}
+
+

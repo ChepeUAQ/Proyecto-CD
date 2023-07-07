@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./crearCertificado.css">
+    <title>Crear Certificado</title>
+</head>
+<body>
+    
+    <div id="container_doble">
+
+        <div id="titulo-certificado" class="container">
+            <h1 id="titulo">Creación de Certificado</h1><br>
+            <p>Vas a crear un certificado en el sistema</p>
+            <img id="img_logo_CD" src="resourses/logo_CD.png" alt="logo_CD">
+        </div>
+
+        <div id="registro-certificado">
+            <form id="crearCertificado">
+                <h2>Ingresa sus datos</h2>
+                <label for="expediente">Expediente:</label>
+                <input class = "input_text" type="number" name="expediente" id="expediente" placeholder="123456" required>
+                
+                <label for="nombre">Nombre:</label>
+                <input class="input_text" type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+                
+                <label for="fecha-inicio">Fecha Inicio:</label>
+                <input class="input_text" type="date" name="fecha-inicio" id="fecha-inicio" required>
+                
+                <label for="fecha-final">Fecha Final:</label>
+                <input class="input_text" type="date" name="fecha-final" id="fecha-final" required>
+                
+                <label for="skills">Skills desarrolladas en el curso:</label>
+                <input class="input_text" type="text" name="skills" id="skills" placeholder="HTLM básico , CSS básico" required>
+    
+                <input type="submit" value="Crear certificado" id="btn_crearCertificado"> <!--Crear certificado-->
+            </form>
+    
+            
+    
+        </div>
+    </div>
+    
+</body>
+<script>
+    const formulario = document.getElementById('crearCertificado'); // Obtiene el formulario
+
+    formulario.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const expediente = e.target.expediente.value;
+        const nombre = e.target.nombre.value;
+        const fechaInicio = e.target['fecha-inicio'].value;
+        const fechaFinal = e.target['fecha-final'].value;
+        const skills = e.target.skills.value.split(',').map(skill => skill.trim());
+
+
+        const certificado = {
+            expediente,
+            nombre,
+            fechaInicio,
+            fechaFinal,
+            skills
+        };
+
+        // Guardar los datos en el Local Storage
+        guardarCertificado(certificado);
+
+        // Mostrar una alerta de éxito
+        alert('Certificado creado correctamente');
+
+        // Limpiar los campos del formulario
+        formulario.reset();
+        
+        console.log('Datos guardados correctamente');
+    });
+
+    function guardarCertificado(certificado) {
+        // Obtener el arreglo de certificados existente en el Local Storage
+        let certificados = JSON.parse(localStorage.getItem('certificados')) || [];
+
+        // Agregar el nuevo certificado al arreglo
+        certificados.push(certificado);
+
+        // Guardar el arreglo de certificados actualizado en el Local Storage
+        localStorage.setItem('certificados', JSON.stringify(certificados));
+
+        // Mostrar los certificados en la consola
+        console.log(certificados);
+    }
+</script>
+</html>
